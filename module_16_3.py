@@ -4,10 +4,6 @@ app = FastAPI()
 
 users = {'1': 'Имя: Example, возраст: 18'}
 
-@app.get("/")
-async def read_root():
-    return 'Главная страница'
-
 @app.get("/users")
 async def users_list() -> dict:
     return users
